@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ปฏิทินปฏิบัติงานโรงเรียนคุณธรรม ภาคเรียนที่ 1/2569</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Noto+Serif+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #FBF4E0;
+    --navy: #1A2744;
+    --navy-mid: #243460;
+    --navy-light: #2E4080;
+    --cream: #FEFCF5;
+    --sage: #5C7A5C;
+    --sage-light: #7A9E7A;
+    --rust: #8B3A2A;
+    --sky: #3A6B8B;
+    --text: #1E1E2E;
+    --text-muted: #5A5A6E;
+    --border: #D9C98A;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: ‘Sarabun’, sans-serif;
+background: var(–cream);
+color: var(–text);
+min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.header {
+background: linear-gradient(135deg, var(–navy) 0%, var(–navy-mid) 60%, var(–navy-light) 100%);
+position: relative;
+overflow: hidden;
+padding: 48px 40px 40px;
+text-align: center;
+}
+
+.header::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background:
+radial-gradient(ellipse 60% 40% at 20% 50%, rgba(201,168,76,0.15) 0%, transparent 60%),
+radial-gradient(ellipse 50% 50% at 80% 50%, rgba(201,168,76,0.10) 0%, transparent 60%);
+}
+
+.header-ornament {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 16px;
+margin-bottom: 12px;
+}
+
+.ornament-line {
+flex: 1;
+max-width: 120px;
+height: 1px;
+background: linear-gradient(90deg, transparent, var(–gold), transparent);
+}
+
+.lotus-icon {
+font-size: 28px;
+line-height: 1;
+}
+
+.header-badge {
+display: inline-block;
+background: rgba(201,168,76,0.18);
+border: 1px solid rgba(201,168,76,0.4);
+color: var(–gold-light);
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 3px;
+padding: 4px 18px;
+border-radius: 20px;
+margin-bottom: 16px;
+text-transform: uppercase;
+}
+
+.header h1 {
+font-family: ‘Noto Serif Thai’, serif;
+font-size: clamp(22px, 4vw, 34px);
+font-weight: 700;
+color: #fff;
+line-height: 1.4;
+position: relative;
+z-index: 1;
+text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.header h1 span {
+color: var(–gold-light);
+}
+
+.header-sub {
+margin-top: 10px;
+color: rgba(255,255,255,0.7);
+font-size: 15px;
+font-weight: 400;
+position: relative;
+z-index: 1;
+}
+
+.header-pills {
+display: flex;
+justify-content: center;
+gap: 10px;
+margin-top: 20px;
+flex-wrap: wrap;
+position: relative;
+z-index: 1;
+}
+
+.pill {
+background: rgba(255,255,255,0.08);
+border: 1px solid rgba(255,255,255,0.2);
+color: rgba(255,255,255,0.85);
+padding: 5px 14px;
+border-radius: 20px;
+font-size: 13px;
+font-weight: 500;
+}
+
+/* ===== VIRTUE BANNER ===== */
+.virtue-banner {
+background: var(–gold-pale);
+border-top: 3px solid var(–gold);
+border-bottom: 3px solid var(–gold);
+padding: 14px 20px;
+display: flex;
+justify-content: center;
+gap: 0;
+overflow-x: auto;
+}
+
+.virtue-item {
+display: flex;
+align-items: center;
+gap: 8px;
+padding: 0 20px;
+border-right: 1px solid var(–border);
+white-space: nowrap;
+}
+
+.virtue-item:last-child { border-right: none; }
+
+.virtue-icon { font-size: 18px; }
+
+.virtue-label {
+font-size: 14px;
+font-weight: 700;
+color: var(–navy);
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 36px 20px 60px;
+}
+
+.section-title {
+font-family: ‘Noto Serif Thai’, serif;
+font-size: 18px;
+font-weight: 700;
+color: var(–navy);
+margin-bottom: 18px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.section-title::before {
+content: ‘’;
+display: block;
+width: 6px;
+height: 24px;
+background: linear-gradient(180deg, var(–gold), var(–gold-light));
+border-radius: 3px;
+flex-shrink: 0;
+}
+
+/* ===== LEGEND ===== */
+.legend-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 32px;
+}
+
+.legend-item {
+display: flex;
+align-items: center;
+gap: 8px;
+background: #fff;
+border: 1px solid #e8e0c8;
+border-radius: 8px;
+padding: 7px 14px;
+font-size: 13px;
+font-weight: 500;
+color: var(–text);
+}
+
+.legend-dot {
+width: 14px;
+height: 14px;
+border-radius: 3px;
+flex-shrink: 0;
+}
+
+/* ===== TIMELINE TABLE ===== */
+.timeline-wrapper {
+overflow-x: auto;
+border-radius: 14px;
+box-shadow: 0 4px 24px rgba(26,39,68,0.10);
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+background: #fff;
+min-width: 700px;
+}
+
+thead th {
+background: var(–navy);
+color: #fff;
+font-family: ‘Noto Serif Thai’, serif;
+font-size: 14px;
+font-weight: 600;
+padding: 14px 16px;
+text-align: left;
+position: sticky;
+top: 0;
+z-index: 10;
+}
+
+thead th:first-child { border-radius: 14px 0 0 0; width: 100px; }
+thead th:last-child  { border-radius: 0 14px 0 0; }
+
+tbody tr { transition: background 0.15s; }
+tbody tr:hover { background: var(–gold-pale) !important; }
+
+tbody tr:nth-child(even) { background: #FAFAF6; }
+
+td {
+padding: 13px 16px;
+font-size: 14px;
+border-bottom: 1px solid #EDE8D4;
+vertical-align: top;
+line-height: 1.6;
+}
+
+td:first-child {
+font-family: ‘Noto Serif Thai’, serif;
+font-weight: 700;
+color: var(–navy);
+white-space: nowrap;
+border-right: 2px solid var(–gold-pale);
+font-size: 13px;
+}
+
+/* ===== CATEGORY TAGS ===== */
+.tag {
+display: inline-block;
+padding: 2px 10px;
+border-radius: 12px;
+font-size: 12px;
+font-weight: 700;
+margin-right: 4px;
+margin-bottom: 2px;
+}
+
+.tag-plan   { background: #EDF4FF; color: #1E5BA8; border: 1px solid #A8C4F0; }
+.tag-train  { background: #EFF8F0; color: #2D7A35; border: 1px solid #90CC96; }
+.tag-act    { background: #FFF5E6; color: #A05A00; border: 1px solid #F0C070; }
+.tag-eval   { background: #F5F0FF; color: #6030A0; border: 1px solid #C0A0E8; }
+.tag-report { background: #FFF0F0; color: #A03030; border: 1px solid #E0A0A0; }
+.tag-event  { background: #F0FBF8; color: #1A7060; border: 1px solid #90D0C0; }
+
+.activity-title {
+font-weight: 600;
+color: var(–text);
+font-size: 14px;
+}
+
+.activity-detail {
+color: var(–text-muted);
+font-size: 13px;
+margin-top: 2px;
+}
+
+.month-header td {
+background: linear-gradient(90deg, var(–navy-mid), var(–navy-light)) !important;
+color: #fff !important;
+font-family: ‘Noto Serif Thai’, serif !important;
+font-weight: 700 !important;
+font-size: 15px !important;
+padding: 11px 16px !important;
+border-bottom: 2px solid var(–gold) !important;
+border-right: none !important;
+letter-spacing: 0.5px;
+}
+
+.month-header td span {
+background: rgba(201,168,76,0.25);
+padding: 2px 12px;
+border-radius: 12px;
+color: var(–gold-light);
+font-size: 13px;
+font-weight: 500;
+margin-left: 10px;
+}
+
+/* ===== NOTES ===== */
+.notes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 16px;
+margin-top: 36px;
+}
+
+.note-card {
+background: #fff;
+border: 1px solid #e8e0c8;
+border-left: 4px solid var(–gold);
+border-radius: 10px;
+padding: 18px 20px;
+box-shadow: 0 2px 8px rgba(26,39,68,0.06);
+}
+
+.note-card h3 {
+font-size: 14px;
+font-weight: 700;
+color: var(–navy);
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.note-card ul {
+list-style: none;
+padding: 0;
+}
+
+.note-card ul li {
+font-size: 13px;
+color: var(–text-muted);
+padding: 4px 0;
+border-bottom: 1px dashed #e8e4d4;
+display: flex;
+align-items: flex-start;
+gap: 6px;
+}
+
+.note-card ul li:last-child { border-bottom: none; }
+
+.note-card ul li::before {
+content: ‘◆’;
+color: var(–gold);
+font-size: 8px;
+margin-top: 6px;
+flex-shrink: 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+background: var(–navy);
+color: rgba(255,255,255,0.55);
+text-align: center;
+padding: 22px;
+font-size: 12.5px;
+margin-top: 40px;
+}
+
+.footer strong { color: var(–gold-light); }
+
+@media (max-width: 600px) {
+.header { padding: 32px 20px 28px; }
+.virtue-banner { gap: 0; padding: 12px 0; }
+.virtue-item { padding: 0 12px; font-size: 12px; }
+.container { padding: 24px 12px 48px; }
+}
+
+@media print {
+body { background: #fff; }
+.header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.month-header td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+thead th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+  <div class="header-badge">แผนปฏิบัติงาน</div>
+  <div class="header-ornament">
+    <div class="ornament-line"></div>
+    <div class="lotus-icon">🪷</div>
+    <div class="ornament-line" style="background:linear-gradient(90deg,var(--gold),transparent)"></div>
+  </div>
+  <h1>ปฏิทินปฏิบัติงาน<br><span>โรงเรียนคุณธรรม</span></h1>
+  <div class="header-sub">ภาคเรียนที่ 1 ปีการศึกษา 2569 &nbsp;|&nbsp; พฤษภาคม – กันยายน 2569</div>
+  <div class="header-pills">
+    <span class="pill">🏫 โรงเรียนคุณธรรม สพฐ.</span>
+    <span class="pill">📋 ตามแนวทาง MORAL MODEL</span>
+    <span class="pill">📅 ระยะเวลา 5 เดือน</span>
+  </div>
+</div>
+
+<!-- VIRTUE BANNER -->
+
+<div class="virtue-banner">
+  <div class="virtue-item">
+    <span class="virtue-icon">🌿</span>
+    <span class="virtue-label">ความซื่อสัตย์สุจริต</span>
+  </div>
+  <div class="virtue-item">
+    <span class="virtue-icon">🤲</span>
+    <span class="virtue-label">ความพอเพียง</span>
+  </div>
+  <div class="virtue-item">
+    <span class="virtue-icon">💪</span>
+    <span class="virtue-label">ความรับผิดชอบ</span>
+  </div>
+  <div class="virtue-item">
+    <span class="virtue-icon">✨</span>
+    <span class="virtue-label">ความกตัญญู</span>
+  </div>
+  <div class="virtue-item">
+    <span class="virtue-icon">🕊️</span>
+    <span class="virtue-label">อุดมการณ์คุณธรรม</span>
+  </div>
+</div>
+
+<!-- MAIN -->
+
+<div class="container">
+
+  <!-- LEGEND -->
+
+  <div class="section-title">คำอธิบายประเภทกิจกรรม</div>
+  <div class="legend-grid">
+    <div class="legend-item"><div class="legend-dot" style="background:#A8C4F0;"></div>วางแผน / เตรียมการ</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#90CC96;"></div>อบรม / พัฒนาบุคลากร</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#F0C070;"></div>ดำเนินกิจกรรม / ปฏิบัติการ</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#C0A0E8;"></div>ประเมินผล / ติดตาม</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#E0A0A0;"></div>รายงานผล / นิเทศ</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#90D0C0;"></div>งานวันสำคัญ / กิจกรรมพิเศษ</div>
+  </div>
+
+  <!-- TABLE -->
+
+  <div class="section-title">ตารางกิจกรรมรายเดือน</div>
+  <div class="timeline-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>ช่วงเวลา</th>
+          <th>กิจกรรม / งาน</th>
+          <th>ประเภท</th>
+          <th>ผู้รับผิดชอบ</th>
+          <th>หมายเหตุ / เป้าหมาย</th>
+        </tr>
+      </thead>
+      <tbody>
+
+    <!-- ===== พฤษภาคม ===== -->
+    <tr class="month-header">
+      <td colspan="5">🌸 พฤษภาคม 2569 <span>เปิดภาคเรียน – วางรากฐาน</span></td>
+    </tr>
+    <tr>
+      <td>1 – 10 พ.ค.</td>
+      <td>
+        <div class="activity-title">ประชุมคณะกรรมการโรงเรียนคุณธรรม ครั้งที่ 1</div>
+        <div class="activity-detail">ทบทวนผลปีที่ผ่านมา กำหนดเป้าหมายคุณธรรม และแต่งตั้งคณะทำงาน</div>
+      </td>
+      <td><span class="tag tag-plan">วางแผน</span></td>
+      <td>ผู้บริหาร / คณะกรรมการ</td>
+      <td>กำหนดคุณธรรมอัตลักษณ์ 1–3 ข้อ</td>
+    </tr>
+    <tr>
+      <td>1 – 15 พ.ค.</td>
+      <td>
+        <div class="activity-title">จัดทำ / ปรับปรุงแผนปฏิบัติการโรงเรียนคุณธรรม</div>
+        <div class="activity-detail">บูรณาการกับแผนพัฒนาคุณภาพการศึกษา และแผนงบประมาณ</div>
+      </td>
+      <td><span class="tag tag-plan">วางแผน</span></td>
+      <td>ฝ่ายวิชาการ / ทีมคุณธรรม</td>
+      <td>แผนรับรองโดยผู้อำนวยการ</td>
+    </tr>
+    <tr>
+      <td>16 พ.ค.</td>
+      <td>
+        <div class="activity-title">วันเปิดภาคเรียน – พิธีไหว้ครู / ปฐมนิเทศนักเรียน</div>
+        <div class="activity-detail">ปลูกฝังคุณธรรม ความกตัญญู มารยาทไทย และกฎระเบียบ</div>
+      </td>
+      <td><span class="tag tag-event">งานสำคัญ</span></td>
+      <td>งานกิจการนักเรียน / ครูทุกคน</td>
+      <td>นักเรียน ครู ผู้ปกครองมีส่วนร่วม</td>
+    </tr>
+    <tr>
+      <td>16 – 31 พ.ค.</td>
+      <td>
+        <div class="activity-title">ปฐมนิเทศและอบรมคุณธรรมนักเรียนใหม่</div>
+        <div class="activity-detail">แนะนำอัตลักษณ์คุณธรรมโรงเรียน กิจกรรม Home Room คุณธรรม</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>ครูประจำชั้น / ครูแนะแนว</td>
+      <td>จัดทำสมุดบันทึกคุณธรรมนักเรียน</td>
+    </tr>
+    <tr>
+      <td>16 – 31 พ.ค.</td>
+      <td>
+        <div class="activity-title">อบรมพัฒนาครู – ทิศทางโรงเรียนคุณธรรม</div>
+        <div class="activity-detail">แนวทาง MORAL MODEL, การออกแบบกิจกรรมบูรณาการคุณธรรมในชั้นเรียน</div>
+      </td>
+      <td><span class="tag tag-train">อบรม</span></td>
+      <td>ฝ่ายวิชาการ / วิทยากร</td>
+      <td>ครูทุกคนเข้าร่วม 100%</td>
+    </tr>
+    <tr>
+      <td>ทุกวันศุกร์</td>
+      <td>
+        <div class="activity-title">กิจกรรมหน้าเสาธง "คุณธรรมประจำสัปดาห์"</div>
+        <div class="activity-detail">ผู้บริหาร / ครู / นักเรียนผลัดกันนำเสนอเรื่องเล่าคุณธรรม 3–5 นาที</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>คณะกรรมการนักเรียน / ครูเวร</td>
+      <td>ตลอดภาคเรียน</td>
+    </tr>
+
+    <!-- ===== มิถุนายน ===== -->
+    <tr class="month-header">
+      <td colspan="5">🌿 มิถุนายน 2569 <span>สร้างวัฒนธรรมคุณธรรม</span></td>
+    </tr>
+    <tr>
+      <td>1 – 15 มิ.ย.</td>
+      <td>
+        <div class="activity-title">กิจกรรม "ครูดีมีคุณธรรม" – ถอดบทเรียนครูต้นแบบ</div>
+        <div class="activity-detail">คัดเลือกครูต้นแบบด้านคุณธรรม จัดเวทีแลกเปลี่ยนเรียนรู้ PLC</div>
+      </td>
+      <td><span class="tag tag-train">อบรม</span><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>ฝ่ายบุคลากร / ทีมคุณธรรม</td>
+      <td>บันทึกวิดีโอ Best Practice</td>
+    </tr>
+    <tr>
+      <td>สัปดาห์ที่ 2</td>
+      <td>
+        <div class="activity-title">วันสำคัญ – วันไหว้ครู (ประมาณ 12 มิ.ย.)</div>
+        <div class="activity-detail">พิธีไหว้ครู มอบรางวัลนักเรียนคุณธรรมดีเด่น ประกาศเจตนารมณ์</div>
+      </td>
+      <td><span class="tag tag-event">งานสำคัญ</span></td>
+      <td>งานกิจการนักเรียน / ผู้บริหาร</td>
+      <td>บูรณาการความกตัญญูกตเวที</td>
+    </tr>
+    <tr>
+      <td>16 – 30 มิ.ย.</td>
+      <td>
+        <div class="activity-title">กิจกรรม "นักเรียนแกนนำคุณธรรม"</div>
+        <div class="activity-detail">คัดเลือกและอบรมนักเรียนแกนนำ ให้เป็นแบบอย่างแก่เพื่อนในโรงเรียน</div>
+      </td>
+      <td><span class="tag tag-train">อบรม</span></td>
+      <td>งานกิจการนักเรียน / ครูแนะแนว</td>
+      <td>อย่างน้อย ห้องเรียนละ 2 คน</td>
+    </tr>
+    <tr>
+      <td>ทุกสัปดาห์</td>
+      <td>
+        <div class="activity-title">Home Room คุณธรรม – บันทึกความดีประจำสัปดาห์</div>
+        <div class="activity-detail">นักเรียนบันทึกพฤติกรรมดีในสมุดบันทึกคุณธรรม ครูประจำชั้นติดตาม</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>ครูประจำชั้น</td>
+      <td>รวบรวมส่งทีมคุณธรรมทุกเดือน</td>
+    </tr>
+    <tr>
+      <td>ปลาย มิ.ย.</td>
+      <td>
+        <div class="activity-title">นิเทศติดตามภายใน ครั้งที่ 1</div>
+        <div class="activity-detail">ตรวจเยี่ยมชั้นเรียน สังเกตการจัดกิจกรรมบูรณาการคุณธรรม</div>
+      </td>
+      <td><span class="tag tag-eval">ประเมินผล</span></td>
+      <td>ผู้บริหาร / หัวหน้าฝ่าย</td>
+      <td>บันทึกผลการนิเทศ</td>
+    </tr>
+
+    <!-- ===== กรกฎาคม ===== -->
+    <tr class="month-header">
+      <td colspan="5">☀️ กรกฎาคม 2569 <span>ส่งเสริมและพัฒนา</span></td>
+    </tr>
+    <tr>
+      <td>สัปดาห์ที่ 1</td>
+      <td>
+        <div class="activity-title">วันสำคัญ – วันอาสาฬหบูชา / วันเข้าพรรษา</div>
+        <div class="activity-detail">กิจกรรมถวายเทียนพรรษา ทำบุญ ฟังธรรม ส่งเสริมคุณธรรมทางศาสนา</div>
+      </td>
+      <td><span class="tag tag-event">งานสำคัญ</span></td>
+      <td>งานกิจการนักเรียน / ชุมชน</td>
+      <td>บูรณาการคุณธรรม "ความพอเพียง"</td>
+    </tr>
+    <tr>
+      <td>1 – 15 ก.ค.</td>
+      <td>
+        <div class="activity-title">โครงการ "ชุมชนแห่งคุณธรรม" – เชื่อมโยงผู้ปกครอง</div>
+        <div class="activity-detail">ประชุมผู้ปกครอง เชิญชวนร่วมกิจกรรมคุณธรรมที่บ้าน แลกเปลี่ยนเรื่องเล่า</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>งานกิจการนักเรียน / ครูแนะแนว</td>
+      <td>ผู้ปกครองมีส่วนร่วมอย่างน้อย 60%</td>
+    </tr>
+    <tr>
+      <td>16 – 31 ก.ค.</td>
+      <td>
+        <div class="activity-title">กิจกรรมจิตอาสา "นักเรียนดีเพื่อสังคม"</div>
+        <div class="activity-detail">บำเพ็ญประโยชน์ในโรงเรียนและชุมชน บันทึกชั่วโมงจิตอาสา</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>คณะกรรมการนักเรียน / ครูที่ปรึกษา</td>
+      <td>เป้าหมาย 100% ของนักเรียน</td>
+    </tr>
+    <tr>
+      <td>สัปดาห์ที่ 4</td>
+      <td>
+        <div class="activity-title">ประชุมคณะกรรมการ ครั้งที่ 2 – ทบทวนกลางภาค</div>
+        <div class="activity-detail">ติดตามผลการดำเนินงาน ปัญหา อุปสรรค และปรับแผน</div>
+      </td>
+      <td><span class="tag tag-eval">ประเมินผล</span></td>
+      <td>คณะกรรมการโรงเรียนคุณธรรม</td>
+      <td>จัดทำรายงานความก้าวหน้า</td>
+    </tr>
+    <tr>
+      <td>28 ก.ค.</td>
+      <td>
+        <div class="activity-title">วันเฉลิมพระชนมพรรษา รัชกาลที่ 10</div>
+        <div class="activity-detail">พิธีถวายพระพร กิจกรรมจิตอาสาเทิดพระเกียรติ ปลูกต้นไม้เพื่อแผ่นดิน</div>
+      </td>
+      <td><span class="tag tag-event">งานสำคัญ</span></td>
+      <td>ผู้บริหาร / ครู / นักเรียน</td>
+      <td>บูรณาการความจงรักภักดี</td>
+    </tr>
+
+    <!-- ===== สิงหาคม ===== -->
+    <tr class="month-header">
+      <td colspan="5">🌻 สิงหาคม 2569 <span>เข้มข้น – นำเสนอผลงาน</span></td>
+    </tr>
+    <tr>
+      <td>สัปดาห์ที่ 1</td>
+      <td>
+        <div class="activity-title">สัปดาห์วิทยาศาสตร์ – บูรณาการคุณธรรม "ความซื่อสัตย์ในการทดลอง"</div>
+        <div class="activity-detail">นิทรรศการโครงงานวิทยาศาสตร์ที่แฝงคุณค่าคุณธรรม</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>กลุ่มสาระวิทยาศาสตร์ / ทีมคุณธรรม</td>
+      <td>บูรณาการสู่ทุกกลุ่มสาระ</td>
+    </tr>
+    <tr>
+      <td>12 ส.ค.</td>
+      <td>
+        <div class="activity-title">วันแม่แห่งชาติ – กิจกรรม "รักแม่ด้วยหัวใจคุณธรรม"</div>
+        <div class="activity-detail">กิจกรรมแสดงความกตัญญู เขียนจดหมายรักถึงแม่ พิธีกราบเท้าแม่</div>
+      </td>
+      <td><span class="tag tag-event">งานสำคัญ</span></td>
+      <td>ครูประจำชั้น / งานกิจการนักเรียน</td>
+      <td>บูรณาการคุณธรรม "ความกตัญญู"</td>
+    </tr>
+    <tr>
+      <td>1 – 20 ส.ค.</td>
+      <td>
+        <div class="activity-title">ค่ายคุณธรรมนักเรียน (หรือกิจกรรมพัฒนาคุณภาพชีวิต)</div>
+        <div class="activity-detail">กิจกรรมฐาน 4 ด้าน: ซื่อสัตย์ / พอเพียง / รับผิดชอบ / กตัญญู</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span><span class="tag tag-train">อบรม</span></td>
+      <td>ทีมคุณธรรม / ครูกิจการนักเรียน</td>
+      <td>แบ่งตามช่วงชั้น ป.1–3 / ป.4–6 / ม.ต้น</td>
+    </tr>
+    <tr>
+      <td>สัปดาห์ที่ 3</td>
+      <td>
+        <div class="activity-title">นิทรรศการ "เล่าเรื่องดี สู่วิถีคุณธรรม"</div>
+        <div class="activity-detail">นักเรียนนำเสนอโครงงานคุณธรรม ต้นแบบความดี บอร์ดนิทรรศการ</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>ทีมคุณธรรม / ครูทุกกลุ่มสาระ</td>
+      <td>เปิดให้ผู้ปกครองและชุมชนชม</td>
+    </tr>
+    <tr>
+      <td>สัปดาห์ที่ 4</td>
+      <td>
+        <div class="activity-title">ประเมินผลกลางภาค – พฤติกรรมคุณธรรมนักเรียน</div>
+        <div class="activity-detail">รวบรวมสมุดบันทึกความดี สรุปชั่วโมงจิตอาสา ประเมินพฤติกรรมนักเรียน</div>
+      </td>
+      <td><span class="tag tag-eval">ประเมินผล</span></td>
+      <td>ครูประจำชั้น / ทีมคุณธรรม</td>
+      <td>ใช้เกณฑ์มาตรฐาน สพฐ.</td>
+    </tr>
+
+    <!-- ===== กันยายน ===== -->
+    <tr class="month-header">
+      <td colspan="5">🍂 กันยายน 2569 <span>สรุปผล – สู่ความยั่งยืน</span></td>
+    </tr>
+    <tr>
+      <td>1 – 10 ก.ย.</td>
+      <td>
+        <div class="activity-title">กิจกรรม "ถอดบทเรียนโรงเรียนคุณธรรม" ภาคเรียนที่ 1</div>
+        <div class="activity-detail">ครู นักเรียน และผู้ปกครองแกนนำร่วมสะท้อนผล AAR (After Action Review)</div>
+      </td>
+      <td><span class="tag tag-eval">ประเมินผล</span></td>
+      <td>ทีมคุณธรรม / คณะกรรมการสถานศึกษา</td>
+      <td>บันทึกข้อดี ปัญหา และข้อเสนอแนะ</td>
+    </tr>
+    <tr>
+      <td>1 – 15 ก.ย.</td>
+      <td>
+        <div class="activity-title">ประกวด / มอบรางวัล "นักเรียนดีมีคุณธรรม" ประจำภาคเรียน</div>
+        <div class="activity-detail">คัดเลือกจากสมุดบันทึกความดี ชั่วโมงจิตอาสา และการประเมินพฤติกรรม</div>
+      </td>
+      <td><span class="tag tag-event">งานสำคัญ</span></td>
+      <td>คณะกรรมการโรงเรียนคุณธรรม</td>
+      <td>ทุกระดับชั้น / แต่ละคุณธรรมอัตลักษณ์</td>
+    </tr>
+    <tr>
+      <td>16 – 20 ก.ย.</td>
+      <td>
+        <div class="activity-title">ประชุมคณะกรรมการ ครั้งที่ 3 – สรุปผลภาคเรียน</div>
+        <div class="activity-detail">วิเคราะห์ผลลัพธ์ตามตัวชี้วัด จัดทำรายงานผลเพื่อเสนอ สพฐ. / สพท.</div>
+      </td>
+      <td><span class="tag tag-report">รายงานผล</span></td>
+      <td>คณะกรรมการโรงเรียนคุณธรรม</td>
+      <td>รายงานภายใน 30 ก.ย.</td>
+    </tr>
+    <tr>
+      <td>สัปดาห์ที่ 3</td>
+      <td>
+        <div class="activity-title">จัดทำรายงานผลการดำเนินงานโรงเรียนคุณธรรม</div>
+        <div class="activity-detail">รวบรวมหลักฐาน ภาพถ่าย สถิติ และเรื่องเล่าความสำเร็จ</div>
+      </td>
+      <td><span class="tag tag-report">รายงานผล</span></td>
+      <td>ทีมคุณธรรม / ฝ่ายวิชาการ</td>
+      <td>จัดทำเป็นรูปเล่มและไฟล์ดิจิทัล</td>
+    </tr>
+    <tr>
+      <td>สัปดาห์ที่ 4</td>
+      <td>
+        <div class="activity-title">วางแผนภาคเรียนที่ 2 – ต่อยอดความสำเร็จ</div>
+        <div class="activity-detail">กำหนดกิจกรรมใหม่ บูรณาการบทเรียนจากภาค 1 พัฒนาครูต่อเนื่อง</div>
+      </td>
+      <td><span class="tag tag-plan">วางแผน</span></td>
+      <td>ผู้บริหาร / ทีมคุณธรรม</td>
+      <td>เตรียมพร้อมก่อนเปิดภาค 2</td>
+    </tr>
+    <tr>
+      <td>ภายใน 30 ก.ย.</td>
+      <td>
+        <div class="activity-title">ส่งรายงานผลต่อ สพท. / สพฐ.</div>
+        <div class="activity-detail">รายงานความก้าวหน้าตามแบบฟอร์มที่กำหนด</div>
+      </td>
+      <td><span class="tag tag-report">รายงานผล</span></td>
+      <td>ผู้อำนวยการ / ทีมคุณธรรม</td>
+      <td>ส่งทั้งรูปแบบเอกสารและออนไลน์</td>
+    </tr>
+
+    <!-- กิจกรรมต่อเนื่อง -->
+    <tr class="month-header">
+      <td colspan="5">🔄 กิจกรรมต่อเนื่องตลอดภาคเรียน</td>
+    </tr>
+    <tr>
+      <td>ทุกวันจันทร์</td>
+      <td>
+        <div class="activity-title">กิจกรรมเคารพธงชาติ + ขับร้องเพลงคุณธรรม</div>
+        <div class="activity-detail">ผู้นำนักเรียนนำกล่าวคำปฏิญาณตน และเรื่องเล่าคุณธรรม 3 นาที</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>ครูเวร / คณะกรรมการนักเรียน</td>
+      <td>บันทึกผู้นำในแต่ละสัปดาห์</td>
+    </tr>
+    <tr>
+      <td>ทุกวัน</td>
+      <td>
+        <div class="activity-title">บันทึกความดีในสมุดบันทึกคุณธรรม (นักเรียน)</div>
+        <div class="activity-detail">นักเรียนบันทึกพฤติกรรมดีที่ทำในแต่ละวัน ครูตรวจและให้ Feedback</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>ครูประจำชั้น / นักเรียน</td>
+      <td>เก็บเป็น Portfolio</td>
+    </tr>
+    <tr>
+      <td>ทุกเดือน</td>
+      <td>
+        <div class="activity-title">PLC ทีมคุณธรรม – แลกเปลี่ยนเรียนรู้</div>
+        <div class="activity-detail">ครูแกนนำประชุมแลกเปลี่ยนวิธีปฏิบัติที่ดี ติดตามผลงานนักเรียน</div>
+      </td>
+      <td><span class="tag tag-train">อบรม</span></td>
+      <td>ทีมคุณธรรม</td>
+      <td>บันทึกการประชุมทุกครั้ง</td>
+    </tr>
+    <tr>
+      <td>ทุกสัปดาห์</td>
+      <td>
+        <div class="activity-title">ป้าย / บอร์ด "คนดีของเรา" หน้าโรงเรียน</div>
+        <div class="activity-detail">อัปเดตภาพและเรื่องเล่าความดีของนักเรียนและครูทุกสัปดาห์</div>
+      </td>
+      <td><span class="tag tag-act">ดำเนินการ</span></td>
+      <td>นักเรียนแกนนำ / ครูประชาสัมพันธ์</td>
+      <td>เชื่อมโยงสื่อออนไลน์ของโรงเรียน</td>
+    </tr>
+
+  </tbody>
+</table>
+
+  </div>
+
+  <!-- NOTES -->
+
+  <div class="notes-grid">
+    <div class="note-card">
+      <h3>📌 ผู้รับผิดชอบหลัก</h3>
+      <ul>
+        <li>ผู้อำนวยการ – กำกับ ติดตาม นโยบาย</li>
+        <li>รองฯ ฝ่ายวิชาการ – บูรณาการหลักสูตร</li>
+        <li>รองฯ ฝ่ายกิจการนักเรียน – กิจกรรมภาคปฏิบัติ</li>
+        <li>คณะกรรมการโรงเรียนคุณธรรม – ขับเคลื่อน</li>
+        <li>ครูประจำชั้น / ครูที่ปรึกษา – ชั้นเรียน</li>
+        <li>คณะกรรมการนักเรียน – จิตอาสา / เพื่อนช่วยเพื่อน</li>
+      </ul>
+    </div>
+    <div class="note-card">
+      <h3>🎯 ตัวชี้วัดความสำเร็จ</h3>
+      <ul>
+        <li>นักเรียน 80% มีพฤติกรรมคุณธรรมดีขึ้น</li>
+        <li>ครู 100% บูรณาการคุณธรรมในการสอน</li>
+        <li>กิจกรรมจิตอาสาครบตามเป้าหมาย</li>
+        <li>สมุดบันทึกความดีครบทุกคน</li>
+        <li>รายงานผลส่งภายในกำหนด</li>
+        <li>ผู้ปกครองพึงพอใจ ≥ 80%</li>
+      </ul>
+    </div>
+    <div class="note-card">
+      <h3>📂 เอกสาร / หลักฐานที่ต้องเตรียม</h3>
+      <ul>
+        <li>แผนปฏิบัติการโรงเรียนคุณธรรม</li>
+        <li>สมุดบันทึกความดีรายบุคคล</li>
+        <li>บันทึกชั่วโมงจิตอาสา</li>
+        <li>บันทึกการประชุม PLC ทุกครั้ง</li>
+        <li>ภาพถ่าย / คลิปกิจกรรม</li>
+        <li>รายงานผลการดำเนินงานประจำภาค</li>
+      </ul>
+    </div>
+    <div class="note-card">
+      <h3>📎 หมายเหตุสำคัญ</h3>
+      <ul>
+        <li>กำหนดการอาจปรับได้ตามปฏิทินโรงเรียน</li>
+        <li>วันหยุดราชการตามประกาศรัฐบาล ปรับตาม</li>
+        <li>สอดคล้องกับแนวทาง สพฐ. MORAL MODEL</li>
+        <li>บูรณาการกับกิจกรรมพัฒนาผู้เรียน (กพ.)</li>
+        <li>เชื่อมโยงกับมาตรฐานการศึกษาของสถานศึกษา</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+  <strong>ปฏิทินปฏิบัติงานโรงเรียนคุณธรรม</strong> &nbsp;|&nbsp; ภาคเรียนที่ 1 ปีการศึกษา 2569 (พฤษภาคม – กันยายน 2569)<br>
+  จัดทำตามแนวทางโรงเรียนคุณธรรม สพฐ. &nbsp;|&nbsp; สามารถปรับแก้ได้ตามบริบทของสถานศึกษา
+</div>
+
+</body>
+</html>
